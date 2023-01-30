@@ -1,5 +1,25 @@
-<!-- form handeling -->
-<form method="POST" id="add_user">
+<!-- header including -->
+<%-include('include/_header')%>
+<!-- header including -->
+
+
+<!-- main section -->
+<body>
+    <main id="site-main">
+        <div class="container">
+            <div class="box-nav d-flex justify-between">
+                <div class="filter">
+                    <a href="/"> <i class="fas fa-angle-double-left"></i> All Users</a>
+                </div>
+            </div>
+    
+            <div class="form-title text-center">
+                <h2 class="text-dark">Update User</h2>
+                <span class="text-light"> Use the below form to update the existing user</span>
+            </div>
+    
+            <!-- form handeling -->
+<form method="POST" id="update_user">
     <div class="new-user">
         <div class="form-group">
             <label for="name" class="text-dark">Name</label>
@@ -57,3 +77,13 @@
     </div>
 </form>
 <!-- form handeling -->
+            
+        </div>
+    </main>
+    <script src="/js/script.js"></script>
+</body>
+<!-- main section -->
+
+<!-- footer including -->
+<%-include('include/_footer')%>
+<!-- footer including -->
