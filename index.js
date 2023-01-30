@@ -3,6 +3,8 @@ const dotenv = require('dotenv');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const path = require('path');
+const cors = require('cors');
+const mongoose = require('mongoose');
 
 const connectDB = require('./server/database/connection')
 
@@ -13,10 +15,17 @@ const PORT = process.env.PORT || 8080;
 
 //log request
 app.use(morgan('tiny'));
+app.use(cors());
+app.use(express.json());
 
 //mongodb connection
 
-connectDB();
+mongoose.connect(process.env.MONGO_URI, (err) => {
+    if (err) { console.log(err) }
+    else {
+        console.log("mongodb is connected");
+    }
+})
 
 
 //parse request to parser
@@ -25,6 +34,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //set view engine
 app.set("view engine", "ejs")
 
+
+app.use(bodyParser.json());
 //load assets using middleware
 app.use('/css', express.static(path.resolve(__dirname, "assets/css")))
 app.use('/img', express.static(path.resolve(__dirname, "assets/img")))

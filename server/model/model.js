@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
+mongoose.set('strictQuery', false);
 
-const schema = new mongoose.Schema({
+let schema = new mongoose.Schema({
     name: {
         type: String,
         required: true
@@ -10,8 +11,12 @@ const schema = new mongoose.Schema({
         required: true,
         unique: true
     },
+    sector: {
+        type: String,
+        required: true
+    },
     gender: String,
-    status: String
+    terms_condition: String
 })
 
 const userDB = mongoose.model('userdb', schema);
