@@ -1,0 +1,59 @@
+<!-- form handeling -->
+<form method="POST" id="update_user">
+    <div class="new-user">
+        <div class="form-group">
+            <label for="name" class="text-dark">Name</label>
+            <input type="hidden" name="id" value="">
+            <input type="text" name="name" value="" placeholder="Siam">
+        </div>
+        <div class="form-group">
+            <label for="name" class="text-dark">Email</label>
+            <input type="text" name="email" value="" placeholder="user@gmail.com">
+        </div>
+
+        <div class="wrapper sector">
+            <div>
+                <h3 class="sector-title">Choose your Sector-</h3>
+            </div>
+            <div class="select-btn">
+              <span class="items-heading">Sectors</span>
+              <i class="fas fa-caret-down"></i>
+            </div>
+            <div class="content">
+              <div class="search">
+                <i class="fa-thin fa-magnifying-glass"></i>
+                <input spellcheck="false" type="text" placeholder="Search">
+              </div>
+              <ul class="options"></ul>
+            </div>
+          </div>
+
+        <div class="form-group">
+            <label for="name" class="text-dark">Gender</label>
+            <div class="radio inline">
+                <input type="radio" id="radio-2" name="gender" value="Male">
+                <label for="radio-2" class="radio-label">Male</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-3" name="gender" value="Female">
+                <label for="radio-3" class="radio-label">Female</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="name" class="text-dark">Terms & Conditions</label>
+            <div class="radio inline">
+                <input type="radio" id="radio-4" name="terms & conditions" value="Agree">
+                <label for="radio-4" class="radio-label">Agree</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-5" name="terms & conditions" value="Disagree">
+                <label for="radio-5" class="radio-label">Disagree</label>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn text-dark update">Save</button>
+    </div>
+</form>
+<!-- form handeling -->
