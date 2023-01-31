@@ -41,3 +41,9 @@ searchInp.addEventListener("keyup", () => {
 });
 
 selectBtn.addEventListener("click", () => wrapper.classList.toggle("active"));
+
+
+// add user
+$("#add_user").submit(function (event) {
+    alert("Data Inserted Successfully!");
+})

@@ -13,10 +13,10 @@ let schema = new mongoose.Schema({
     },
     sector: {
         type: String,
-        required: true
+        // required: true
     },
     gender: String,
-    terms_condition: String
+    terms_conditions: String
 })
 
 const userDB = mongoose.model('userdb', schema);

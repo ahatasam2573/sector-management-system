@@ -14,7 +14,7 @@ exports.create = (req, res) => {
         email: req.body.email,
         sector: req.body.sector,
         gender: req.body.gender,
-        terms_condition: req.body.terms_conditions
+        terms_conditions: req.body.terms_conditions
     })
 
     //save user in database
@@ -22,7 +22,9 @@ exports.create = (req, res) => {
     user
         .save(user)
         .then(data => {
-            res.send(data)
+            // res.send(data)
+            res.redirect('/add-user');
+
         })
         .catch(err => {
             // res.status(500).send({
