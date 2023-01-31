@@ -22,13 +22,13 @@
 <form method="POST" id="update_user">
     <div class="new-user">
         <div class="form-group">
-            <label for="name" class="text-dark">Name</label>
-            <input type="hidden" name="id" value="">
-            <input type="text" name="name" value="" placeholder="Siam">
+            <label for="name" class="text-light">Name</label>
+            <input type="hidden" name="id" value="<%= user._id %>">
+            <input type="text" name="name" value="<%= user.name %>" placeholder="Siam">
         </div>
         <div class="form-group">
-            <label for="name" class="text-dark">Email</label>
-            <input type="text" name="email" value="" placeholder="user@gmail.com">
+            <label for="Email" class="text-light">Email</label>
+            <input type="text" name="email" value="<%= user.email%>" placeholder="user@gmail.com">
         </div>
 
         <div class="wrapper sector">
@@ -48,14 +48,14 @@
             </div>
           </div>
 
-        <div class="form-group">
-            <label for="name" class="text-dark">Gender</label>
+          <div class="form-group">
+            <label for="gender" class="text-light">Gender</label>
             <div class="radio inline">
-                <input type="radio" id="radio-2" name="gender" value="Male">
+                <input type="radio" id="radio-2" name="gender" value="Male" <%= user.gender == 'Male' ? 'checked' : '' %>>
                 <label for="radio-2" class="radio-label">Male</label>
             </div>
             <div class="radio inline">
-                <input type="radio" id="radio-3" name="gender" value="Female">
+                <input type="radio" id="radio-3" name="gender" value="Female"  <%= user.gender == 'Female' ? 'checked' : '' %> >
                 <label for="radio-3" class="radio-label">Female</label>
             </div>
         </div>
@@ -63,11 +63,11 @@
         <div class="form-group">
             <label for="name" class="text-dark">Terms & Conditions</label>
             <div class="radio inline">
-                <input type="radio" id="radio-4" name="terms & conditions" value="Agree">
+                <input type="radio" id="radio-4" name="terms_conditions" value="Agree" <%= user.terms_conditions == 'Agree' ? 'checked' : '' %>
                 <label for="radio-4" class="radio-label">Agree</label>
             </div>
             <div class="radio inline">
-                <input type="radio" id="radio-5" name="terms & conditions" value="Disagree">
+                <input type="radio" id="radio-5" name="terms_conditions" value="Disagree" <%= user.terms_conditions == 'Disagree' ? 'checked' : '' %>
                 <label for="radio-5" class="radio-label">Disagree</label>
             </div>
         </div>
